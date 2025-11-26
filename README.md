@@ -17,5 +17,7 @@ The basic justification for the validity of the approximate gradient is that, co
 $$\nabla V(q)\to N\mathcal{I}_F(\hat{q})(q-\hat{q}),$$
 
 where $\mathcal{I}_F(\hat{q})=\mathbb{E}_x\left\[\nabla\_q U(q;x)\nabla_q U(q;x)^T\right\](\hat{q})$. Consequently, one expects an (unbiased) stochastic gradient sample to be distributed
+
 $$\nabla \widetilde{V}_n(q)\sim\mathcal{N}\left(N\mathcal{I}_F(\hat{q})(q-\hat{q}),\frac{N}{n}\mathcal{I}_F(\hat{q})\right).$$
+
 Consequently, one expects $\nabla\widetilde{V}_n(q)-N\mathcal{I}_F(\hat{q})(q-\hat{q})$ to be small, since the size of the noise relative to the mean of the normal distribution scales like $(nN)^{-1/2}$. Hence, one may derive a perturbed semilinear system to which one may apply an (appropriately adapted) RKR integrator. This has been done in an incomplete form for Langevin dynamics (i.e. without momentum $p$) in \cite{Ahn2012}. Moreover, the application of the RKR integrators along similar lines to the modification of HMC used for sampling with stochastic gradient, first considered in \cite{Chen2014}, remains unstudied.
